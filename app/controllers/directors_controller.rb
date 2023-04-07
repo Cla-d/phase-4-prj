@@ -35,5 +35,10 @@ class DirectorsController < ApplicationController
             render json: @director.errors, status: :unprocessable_entity
         end
     end
-    
+
+    private
+
+    def director_params
+       params.require(:director).permit(:name, :gender) 
+    end
 end

@@ -40,3 +40,9 @@ comments = Faker::Lorem.sentence(word_count: 10)
   )
 end
 
+30.times do
+  Actor.create!(
+    name: Faker::Name.name,
+    gender:Faker::Gender.binary_type
+  )
+end
